@@ -14,7 +14,19 @@ public class Frog implements IFrog {
 	public Frog(Game game) {
 		this.game = game;
 
-
-
-
 	}
+
+	@Override
+	public Case getPosition() {
+		return position;
+	}
+
+	@Override
+	public Direction getDirection() {
+		return direction;
+	}
+
+
+
+
+}
