@@ -26,7 +26,22 @@ public class Frog implements IFrog {
 		return direction;
 	}
 
+	public void move(Direction key) {
+		if (key == Direction.up) {
+			this.position = new Case(this.position.absc, this.position.ord + 1);
+		}
+		if (key == Direction.down) {
+			this.position = new Case(this.position.absc, this.position.ord - 1);
+		}
+
+		if (key == Direction.right) {
+			this.position = new Case(this.position.absc + 1, this.position.ord);
+		}
+
+		if (key == Direction.left) {
+			this.position = new Case(this.position.absc - 1, this.position.ord);
+		}
 
 
-
+	}
 }
