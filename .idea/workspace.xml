@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57be3c53-3561-4a01-a82e-c87d01daf687" name="Default Changelist" comment="&#10;maj 17nov">
-      <change afterPath="$PROJECT_DIR$/src/environment/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/environment/Environment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/environment/Lane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/givenEnvironment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Projet1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projet1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environment/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environment/Environment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environment/Lane.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frog/Frog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frog/Frog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gameCommons/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameCommons/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,16 +44,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/givenEnvironment.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.13365734" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/.idea" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

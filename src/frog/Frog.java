@@ -11,10 +11,13 @@ public class Frog implements IFrog {
 	private Case position;
 	private Direction direction;
 
-	public Frog(Game game) {
+	public Frog(Game game ) {
 		this.game = game;
-
+		position = new Case(game.width / 2, 0);
 	}
+
+
+
 
 	@Override
 	public Case getPosition() {
@@ -26,7 +29,7 @@ public class Frog implements IFrog {
 		return direction;
 	}
 
-	public void move(Direction key) {
+	 public void move(Direction key) {
 		if (key == Direction.up) {
 			this.position = new Case(this.position.absc, this.position.ord + 1);
 		}
