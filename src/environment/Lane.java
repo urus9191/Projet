@@ -1,7 +1,7 @@
 package environment;
 
 import java.util.ArrayList;
-
+import graphicalElements.Element;
 import util.Case;
 import gameCommons.Game;
 
@@ -12,6 +12,8 @@ public class Lane {
 	private ArrayList<Car> cars = new ArrayList<>();
 	private boolean leftToRight;
 	private double density;
+	private Case positon;
+	private int time = 0;
 
 	// TODO : Constructeur(s)
 	public Lane(Game game, int ord, double density) {
@@ -33,23 +35,6 @@ public class Lane {
 		return true;
 	}
 
-	public void update() {
-
-		// TODO
-
-		// Toutes les voitures se déplacent d'une case au bout d'un nombre "tic
-		// d'horloge" égal à leur vitesse
-		// Notez que cette méthode est appelée à chaque tic d'horloge
-
-		// Les voitures doivent etre ajoutes a l interface graphique meme quand
-		// elle ne bougent pas
-
-		// A chaque tic d'horloge, une voiture peut être ajoutée
-
-	}
-
-	// TODO : ajout de methodes
-
 	/*
 	 * Fourni : mayAddCar(), getFirstCase() et getBeforeFirstCase()
 	 */
@@ -66,9 +51,7 @@ public class Lane {
 		}
 	}
 
-	private boolean isSafe(Case firstCase) {
 
-	}
 
 	private Case getFirstCase() {
 		if (leftToRight) {
@@ -79,9 +62,28 @@ public class Lane {
 
 	private Case getBeforeFirstCase() {
 		if (leftToRight) {
-			return new Case(-1, ord);
-		} else
-			return new Case(game.width, ord);
+			Case c  = new Case(-1, ord);
+			return c;
+		} else {
+			Case c = new Case(game.width, ord);
+			return c;
+		}
+
+	}
+
+	public void update() {
+		time++;
+		if( this.time >= this.speed ) {
+			for( Car car  : cars ) {
+				car.move();
+			}
+			this.mayAddCar();
+			this.time = 0;
+		}
+		for( Car car : cars) {
+			car.toGraphics();
+		}
+
 	}
 
 }

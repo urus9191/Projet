@@ -13,7 +13,7 @@ public class Environment implements IEnvironment {
     private ArrayList<Lane>lanes;
     public final Random randomGen = new Random();
 
-
+//constructeur
     public Environment(Game game) {
         this.game = game;
         this.lanes = new ArrayList<Lane>(this.game.height);
@@ -26,23 +26,21 @@ public class Environment implements IEnvironment {
         lanes.add(new Lane(game, game.height-1, 0.0D));
     }
 
-
-
-
-
-
     @Override
     public boolean isSafe(Case c) {
-        return false;
+        return this.lanes.get(c.ord).isSafe(c);
     }
 
     @Override
     public boolean isWinningPosition(Case c) {
-        return false;
+        return this.lanes.size()-1 == c.ord;
     }
 
-    @Override
     public void update() {
-
+        for(Lane lane : lanes) {
+            lane.update();
+        }
     }
+
+
 }
