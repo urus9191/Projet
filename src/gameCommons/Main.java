@@ -7,9 +7,9 @@ import environment.Environment;
 
 import javax.swing.Timer;
 //changement précisé enoncée
-import givenEnvironment.GivenEnvironment;
+//import givenEnvironment.GivenEnvironment;
 import frog.Frog;
-import givenEnvironment.GivenEnvironment;
+//import givenEnvironment.GivenEnvironment;
 import graphicalElements.FroggerGraphic;
 import graphicalElements.IFroggerGraphics;
 

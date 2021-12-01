@@ -69,11 +69,12 @@ public class Game {
 	 * @return true si le partie est perdue
 	 */
 	public boolean testLose() {
-		if (this.environment.isSafe(this.frog.getPosition())) {
-			return true;
-		} else {
-			this.graphic.endGameScreen("AHAHAH YOU LOOSE! COME BACK TO MORROW");
+		if (environment.isSafe(frog.getPosition())) {
 			return false;
+		} else {
+			this.graphic.clear();
+			this.graphic.endGameScreen("AHAHAH YOU LOOSE! COME BACK TO MORROW");
+			return true;
 
 		}
 	}
@@ -84,7 +85,8 @@ public class Game {
 		 * @return true si la partie est gagn�e
 		 */
 		public boolean testWin( ) {
-			if (this.environment.isWinningPosition(this.frog.getPosition())) {
+			if (environment.isWinningPosition(frog.getPosition())) {
+				this.graphic.clear();
 				this.graphic.endGameScreen("YOU WIN !!!");
 				return true;
 			} else {
