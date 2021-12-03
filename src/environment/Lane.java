@@ -24,6 +24,8 @@ public class Lane {
 		this.density = density;
 	}
 
+	public Lane(Game game, int size) {
+	}
 
 
 	// TODO : ajout de methodes
@@ -86,4 +88,10 @@ public class Lane {
 
 	}
 
+	public void moveOrd(int i) {
+		this.ord=i;
+		for (Car tmp: cars){
+			tmp.moveOrd(i);
+		}
+	}
 }

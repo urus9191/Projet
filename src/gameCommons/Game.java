@@ -20,6 +20,10 @@ public class Game {
 	private IEnvironment environment;
 	private IFrog frog;
 	private IFroggerGraphics graphic;
+	private int actualScore;
+	private int finalScore;
+	private IEnvironment environment3;
+	private IFrogInf frog3;
 
 	/**
 	 * @param graphic             l'interface graphique
@@ -107,6 +111,19 @@ public class Game {
 				testWin();
 			}
 
+	public void setScore(int i) {
+		this.actualScore+=i;
+		if (actualScore<0){
+			actualScore=0;
 		}
+		if (this.actualScore>this.finalScore){
+			this.finalScore=this.actualScore;
+			environment.addLane();
+		}
+		if ( (this.height+this.actualScore) >= this.height)
+			environment.moveLane(this.actualScore);
+
+	}
+}
 
 

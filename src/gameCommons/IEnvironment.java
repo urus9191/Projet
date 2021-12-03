@@ -27,4 +27,7 @@ public interface IEnvironment {
 	 */
 	public void update();
 
+	void addLane();
+
+	void moveLane(int actualScore);
 }

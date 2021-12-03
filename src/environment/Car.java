@@ -70,5 +70,10 @@ public class Car {
 		addToGraphics();
 	}
 
+	public void moveOrd(int i) {
+		this.leftPosition=new Case(this.leftPosition.absc,i);
+	}
+
+
 
 }

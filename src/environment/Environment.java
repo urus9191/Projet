@@ -42,5 +42,15 @@ public class Environment implements IEnvironment {
         }
     }
 
+    @Override
+    public void addLane() {
+
+    }
+
+    @Override
+    public void moveLane(int actualScore) {
+
+    }
+
 
 }
