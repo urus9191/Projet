@@ -2,10 +2,18 @@ package frog;
 
 import gameCommons.Game;
 import gameCommons.IFrog;
-import util.*;
+import graphicalElements.Element;
+import util.Case;
+import graphicalElements.FroggerGraphic;
+import util.Direction;
 
+import javax.swing.text.Position;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.security.Key;
+import java.awt.event.KeyListener;
 
-public class Frog implements IFrog {
+public class Frog implements IFrog   {
 
 	private Game game;
 	private Case position;
@@ -29,8 +37,8 @@ public class Frog implements IFrog {
 		return direction;
 	}
 
-	 public void move(Direction key) {
-		if (key == Direction.up) {
+	public void move(Direction key) {
+		if (key == Direction.up && this.position.ord < this.game.height - 1) {
 			this.position = new Case(this.position.absc, this.position.ord + 1);
 		}
 		if (key == Direction.down) {

@@ -1,19 +1,19 @@
 package environment;
 
 import gameCommons.Game;
+import gameCommons.IEnvironment;
 import util.Case;
-import gameCommons.IEnvironmentInf;
+
 import java.util.ArrayList;
 import java.util.Random;
 
-public class EnvironmentInf implements IEnvironmentInf {
-
+public class EnvInf implements IEnvironment {
     private Game game;
     private ArrayList<Lane> lanes;
     public final Random randomGen = new Random();
 
     //constructeur
-    public EnvironmentInf (Game game) {
+    public EnvInf(Game game) {
         this.game = game;
         this.lanes = new ArrayList<Lane>(this.game.height);
         lanes.add(new Lane(game, 0, 0.0D));
@@ -27,7 +27,12 @@ public class EnvironmentInf implements IEnvironmentInf {
 
     @Override
     public boolean isSafe(Case c) {
-        return this.lanes.get(c.ord).isSafe(c);
+        for (Lane l : lanes){
+            if (!(l.isSafe(c))){
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override

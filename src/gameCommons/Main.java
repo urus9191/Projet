@@ -3,6 +3,8 @@ package gameCommons;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import environment.EnvInf;
 import environment.Environment;
 
 import javax.swing.Timer;
@@ -10,6 +12,7 @@ import javax.swing.Timer;
 //import givenEnvironment.GivenEnvironment;
 import frog.Frog;
 //import givenEnvironment.GivenEnvironment;
+import frog.FrogInf;
 import graphicalElements.FroggerGraphic;
 import graphicalElements.IFroggerGraphics;
 
@@ -30,12 +33,14 @@ public class Main {
 		//Cr�ation de la partie
 		Game game = new Game(graphic, width, height, minSpeedInTimerLoops, defaultDensity);
 		//Cr�ation et liason de la grenouille
-		IFrog frog = new Frog(game);
+		IFrog frog = new Frog(game); //NORMALE
+		//IFrog frog = new FrogInf(game); //INFINI
 		game.setFrog(frog);
 		graphic.setFrog(frog);
 
 		//Creation et liaison de l’environnement
-		IEnvironment env = new Environment(game);
+		IEnvironment env = new Environment(game);//NORMAL
+		//IEnvironment env = new EnvInf(game);//INFINI
 		game.setEnvironment(env);
 				
 		//Boucle principale : l'environnement s'acturalise tous les tempo milisecondes
